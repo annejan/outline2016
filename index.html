@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>Huisjes</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+       /* canvas { width: 100%; height: 100% } */
+        select { position: absolute; top: 10px; left: 10px; }
+        #buttons {position: absolute; bottom: 10px; left: 10px; }
+    </style>
+</head>
+<body>
+<script src="huisjes-bundle.js"></script>
+<!--<script src="js/three.js"></script>-->
+<!--<script src="js/OrbitControls.js"></script>-->
+<!--<script src="js/huisjes.js"></script>-->
+<select onchange="huisje(this.value)">
+    <option value="azeddine_cloud">Azeddine (cloud)</option>
+    <option value="peter_cloud">Peter (cloud)</option>
+    <option value="azeddine_mesh">Azeddine (mesh)</option>
+    <option value="peter_mesh">Peter (mesh)</option>
+</select>
+<div id="buttons">
+    <button onmousedown="startCCW()" onmouseup="stop()" onmouseout="stop()">Linksom</button>
+    <button onmousedown="startCW()" onmouseup="stop()" onmouseout="stop()">Rechtsom</button>
+    <button onmousedown="startUp()" onmouseup="stop()" onmouseout="stop()">Omhoog</button>
+    <button onmousedown="startDown()" onmouseup="stop()" onmouseout="stop()">Omlaag</button>
+    <button onmousedown="startIn()" onmouseup="stop()" onmouseout="stop()">Zoom +</button>
+    <button onmousedown="startOut()" onmouseup="stop()" onmouseout="stop()">Zoom -</button>
+</div>
+</body>
+</html>
